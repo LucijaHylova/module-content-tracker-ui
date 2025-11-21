@@ -1,0 +1,14 @@
+
+<mat-dialog-content>
+  <div class="notification">
+    {{ data.notification | translate }}
+  </div>
+  <div class="primary-button">
+    <button
+      matButton="filled"
+      (click)="onClick()">
+      {{ data.buttonText | translate }}
+    </button>
+  </div>
+</mat-dialog-content>
+

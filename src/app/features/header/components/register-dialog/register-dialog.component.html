@@ -1,0 +1,71 @@
+<mat-dialog-content>
+  <h2 class="subTitle">{{ 'REGISTER_DIALOG.TITLE' | translate }}</h2>
+  <div class="vertical-content">
+
+    <mat-form-field [hideRequiredMarker]="false">
+      <mat-label>{{ 'REGISTER_DIALOG.USERNAME_LABEL' | translate }} </mat-label>
+      <input
+        matInput
+        [formControl]="username"
+        required
+      />
+
+    </mat-form-field>
+
+    <app-selector
+      (eventOnSelected)="onProgramChange($event)"
+      [disabled]="programDisabled"
+      [options]="Array.from(programSpecializations().keys())"
+      [placeholder]="'REGISTER_DIALOG.CATEGORY_PROGRAM' | translate"
+      [requireSelection]="true"
+      [width]="'400px'">
+    </app-selector>
+
+    <app-selector
+      (eventOnSelected)="onSpecializationChange($event)"
+      [disabled]="specializationDisabled()"
+      [options]="programSpecializations().get(selectedProgram() || '') || []"
+      [placeholder]="'REGISTER_DIALOG.SPECIALIZATION' | translate"
+      [requireSelection]="true"
+      [width]="'400px'">
+    </app-selector>
+
+    <mat-form-field [hideRequiredMarker]="false">
+      <mat-label>{{  'REGISTER_DIALOG.EMAIL_LABEL' | translate }}</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        [formControl]="email"
+        required
+      />
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ 'REGISTER_DIALOG.PASSWORD_LABEL' | translate }}</mat-label>
+      <input matInput
+             [formControl]="password"
+             [type]="hide() ? 'password' : 'text'" />
+      <button
+        matIconButton
+        matSuffix
+        (click)="onClick($event)"
+        [attr.aria-pressed]="hide()"
+      >
+        <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div class="primary-button">
+    <button
+      (click)="register()"
+      [disabled]="this.email.invalid || this.username.invalid || this.password.invalid || this.program.value === ''"
+      matButton="filled">
+      {{ 'REGISTER_DIALOG.CONFIRM_BUTTON' | translate }}
+    </button>
+  </div>
+</mat-dialog-content>
+
+
+
+

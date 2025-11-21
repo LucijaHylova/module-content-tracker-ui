@@ -1,0 +1,62 @@
+<div class="profile-container">
+  @if (selectedNode().category === Category.MODULE[lang()]) {
+    <h2 class="title">
+      {{ 'COMPETENCE_PROFILES.TITLE_CATEGORY_MODULE' | translate }}
+    </h2>
+  }
+  @if (selectedNode().category === Category.PROGRAM[lang()]) {
+    <h2 class="title">
+      {{ 'COMPETENCE_PROFILES.TITLE_CATEGORY_PROGRAM' | translate }}
+    </h2>
+  }
+  @if (selectedNode().category === Category.DEPARTMENT[lang()]) {
+    <h2 class="title">
+      {{ 'COMPETENCE_PROFILES.TITLE_CATEGORY_DEPARTMENT' | translate }}
+    </h2>
+
+  }
+  @if (!loading) {
+    <div
+      #chartContainerCompetenceProfile
+      echarts
+      [options]="chartOptions"
+      style="height: 500px">
+    </div>
+    @if (selectedNode().category === Category.PROGRAM[lang()]) {
+      <div class="filter-container">
+        <div class="selectors">
+          <div class="selectors">
+            <app-selector
+              [value]="selectedModuleType()"
+              [disabled]="moduleTypeDisabled"
+              [options]="moduleTypes()"
+              [placeholder]=" 'COMPETENCE_PROFILES.CATEGORY_MODULE_TYPE' | translate "
+              (eventOnSelected)="onModuleTypeChange($event)"
+              [resetEmitter]="resetEmitterModuleType">
+            </app-selector>
+          </div>
+          <div class="secondary-button">
+            <button matButton="tonal" (click)="resetFilters()">
+              {{ 'COMPETENCE_PROFILES.RESET_BUTTON' | translate }}
+
+            </button>
+          </div>
+        </div>
+      </div>
+
+    }
+
+    <div class="secondary-button">
+      <button matButton="tonal"
+              (click)="back(selectedNode())">
+        {{ 'COMPETENCE_PROFILES.BACK_BUTTON' | translate }}
+      </button>
+    </div>
+
+
+
+  } @else {
+    <div echarts [loading]="true">Loading...</div>
+  }
+</div>
+

@@ -1,0 +1,16 @@
+
+<mat-dialog-content>
+  <div class="notification">
+    {{ 'CONFIRMATION_DIALOG.MESSAGE' | translate }}
+  </div>
+  <div class="buttons-center">
+    <button  matButton="tonal" (click)="onCancel()">
+      {{ 'CONFIRMATION_DIALOG.CONFIRM_BUTTON' | translate }}
+    </button>
+
+    <button matButton="filled" (click)="onConfirm()">
+      {{ 'CONFIRMATION_DIALOG.CANCEL_BUTTON' | translate }}
+    </button>
+  </div>
+</mat-dialog-content>
+

@@ -1,0 +1,39 @@
+<div class="profile-container">
+  <app-study-progress></app-study-progress>
+
+  <div class="status-legend">
+    <strong>{{ 'STUDY_PROGRESS.STATUS_EXPLANATION_TEXT' | translate }}</strong>
+
+    <div class="legend-items">
+
+      <div class="legend-item">
+        <span class="status-line" style="background-color:#1af604;"></span>
+        <span>{{ MODULE_STATUS.PASSED[lang()] }}</span>
+      </div>
+
+      <div class="legend-item">
+        <span class="status-line" style="background-color:#D50000;"></span>
+        <span>{{ MODULE_STATUS.FAILED[lang()] }}</span>
+      </div>
+
+      <div class="legend-item">
+        <span class="status-line" style="background-color:#243ecf;"></span>
+        <span>{{ MODULE_STATUS.IN_PROGRESS[lang()] }}</span>
+      </div>
+
+      <div class="legend-item">
+        <span class="status-line" style="background-color:#188dca;"></span>
+        <span>{{ MODULE_STATUS.RETAKE_IN_PROGRESS[lang()] }}</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="secondary-button">
+    <button matButton="tonal"
+            (click)="back()">
+      {{ 'USER_PROFILE.BACK_BUTTON' | translate }}
+    </button>
+  </div>
+</div>
+

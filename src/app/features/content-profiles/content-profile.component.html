@@ -1,0 +1,22 @@
+<div class="profile-container">
+  <h2 class="title">
+    {{ 'CONTENT_PROFILES.TITLE_CATEGORY_MODULE' | translate }}
+  </h2>
+  @if (!loading) {
+    <div
+      #chartContainerContentProfile
+      echarts
+      [options]="chartOptions"
+      style="height: 500px">
+    </div>
+    <div class="secondary-button">
+      <button matButton="tonal"
+              (click)="back(selectedNode())">
+        {{ 'CONTENT_PROFILES.BACK_BUTTON' | translate }}
+      </button>
+    </div>
+  }
+  @else {
+    <div echarts [loading]="true">Loading...</div>
+  }
+</div>

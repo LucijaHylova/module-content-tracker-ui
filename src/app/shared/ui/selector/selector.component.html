@@ -1,0 +1,47 @@
+<div>
+  @if (useAutocomplete()) {
+    <mat-form-field  [style.width]="width()" >
+      <mat-label>{{ placeholder() }}</mat-label>
+
+      <input
+        type="text"
+        matInput
+        [formControl]="control"
+        (focus)="onFocus()"
+        [matAutocomplete]="auto"
+        [disabled]="disabled()"
+      />
+
+      <mat-autocomplete #auto="matAutocomplete"
+                        (optionSelected)="onOptionSelected($event.option.value)"
+                        [requireSelection]="requireSelection()"
+
+      >
+        @for (o of filteredOptions(); track o) {
+          <mat-option [value]="o">
+            {{ o }}
+          </mat-option>
+        }
+      </mat-autocomplete>
+    </mat-form-field>
+  }
+  @else {
+    <mat-form-field [style.width]="width()">
+      <mat-label>{{ placeholder() }}</mat-label>
+      <mat-select
+        (selectionChange)="onOptionSelected($event)"
+
+      >
+
+        @for (o of filteredOptions(); track o) {
+          <mat-option [value]="o" [disabled]="disabled()" >
+            {{ o }}
+          </mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  }
+
+</div>
+
+

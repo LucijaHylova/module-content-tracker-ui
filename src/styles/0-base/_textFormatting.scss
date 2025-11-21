@@ -1,0 +1,63 @@
+/* see acceptance criteria user story https://flow.sbb.ch/browse/WIAS-1916 */
+.text-content {
+  white-space: pre-wrap;
+
+  h2,
+  h3,
+  h4,
+  .lead {
+    margin-top: 24px;
+  }
+
+  ul,
+  ol {
+    margin: 24px 0;
+  }
+
+  h2 + * {
+    margin-top: 32px !important;
+  }
+
+  h3 + * {
+    margin-top: 24px !important;
+  }
+
+  h4 + * {
+    margin-top: 12px !important;
+  }
+
+  div {
+    line-height: var(--sbb-line-height);
+    overflow-wrap: anywhere;
+  }
+
+  div + div {
+    margin-top: 24px !important;
+  }
+
+  .lead + div {
+    margin-top: 32px !important;
+  }
+
+  /* disabled because stylelint doesnt know about the html structure */
+  /* stylelint-disable-next-line no-descending-specificity */
+  div + h2,
+  div + h3,
+  div + h4,
+  div + .lead {
+    margin-top: 48px !important;
+  }
+
+  h2:last-child {
+    margin-bottom: 8px;
+  }
+}
+
+.column-text-content {
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  .lead:first-child {
+    margin-top: 0;
+  }
+}

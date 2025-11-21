@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  --selector-width: 100%;
+}
+
+mat-form-field {
+  width: var(--selector-width);
+}

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="lang-selector">
+    @if (!isProfileView()) {
+      <app-selector
+        [value]="selectedLang() || Lang.DE"
+        [options]="langs()"
+        [placeholder]=" 'FOOTER.LANGUAGE' | translate "
+        (eventOnSelected)="onLangChange($event)"
+        [useAutocomplete]=" false">
+      </app-selector>
+    }
+
+  </div>
+</div>

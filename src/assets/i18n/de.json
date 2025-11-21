@@ -1,0 +1,133 @@
+{
+  "DASHBOARD": {
+    "CATEGORY_RESPONSIBILITY": "Verantwortung",
+    "CATEGORY_MODULE_TYPE": "Modultyp",
+    "CATEGORY_MODULE": "Modul",
+    "CATEGORY_DEPARTMENT": "Department",
+    "CATEGORY_PROGRAM": "Studiengang",
+    "RESET_BUTTON": "zurücksetzen",
+    "MODULE_SEMANTIC_SEARCH_PLACEHOLDER": "Modul Stichwortsuche...",
+    "SIMILARITY_SEARCH_NO_RESULT": "Keine Module gefunden. Bitte passen Sie Ihre Suchkriterien an.",
+    "SIMILARITY_SEARCH_ERROR": "Fehler bei der Suche nach Modulen. Bitte versuchen Sie es später erneut.",
+    "MODULE_NOT_FOUND": "Modul nicht gefunden"
+  },
+  "NODE_DETAILS_DIALOG": {
+    "CATEGORY_RESPONSIBILITY": "Verantwortung",
+    "CATEGORY_MODULE_TYPE": "Modultyp",
+    "CATEGORY_MODULE": "Modul",
+    "CATEGORY_DEPARTMENT": "Department",
+    "CATEGORY_PROGRAM": "Studiengang",
+    "SPECIALIZATION": "Vertiefung",
+    "SHOW_COMPETENCE_PROFILE_BUTTON": "Kompetenzprofil",
+    "SHOW_CONTENT_PROFILE_BUTTON": "Inhaltsprofil",
+    "ECTS": "ECTS",
+    "SEMESTERS": "Semesters",
+    "SEMESTER": "Semester",
+    "CHANGE_BUTTON": "ändern",
+    "ADD_TO_COMPARISON": "Zum Modulvergleich hinzufügen",
+    "MODULE_CODE": "Module code",
+    "MODULE_STATUS": "Modulstatus",
+    "ADD_TO_MY_STUDY": "Zu meinem Studium hinzufügen",
+    "DELETE_FROM_MY_STUDY": "Aus meinem Studium entfernen",
+    "REMOVE_FROM_MODULE_COMPARISON": "Aus dem Modulvergleich entfernen"
+  },
+  "COMPETENCE_PROFILES": {
+    "TITLE_CATEGORY_MODULE": "Modul Kompetenzprofil",
+    "TITLE_CATEGORY_DEPARTMENT": "Department Kompetenzprofil",
+    "TITLE_CATEGORY_PROGRAM": "Studiengang Kompetezprofil",
+    "CATEGORY_MODULE_TYPE": "Modultyp",
+    "BACK_BUTTON": "zurück",
+    "RESET_BUTTON": "zurücksetzen"
+  },
+  "CONTENT_PROFILES": {
+    "TITLE_CATEGORY_MODULE": "Modul Inhaltsprofil",
+    "BACK_BUTTON": "zurück",
+    "RESET_BUTTON": "zurücksetzen"
+  },
+  "HEADER": {
+    "REGISTER": "Registrieren",
+    "LOGIN": "Einloggen",
+    "LOGOUT": "Ausloggen",
+    "STUDY_PROGRESS": "Studienverlauf",
+    "HOME": "Startseite",
+    "USER_PROFILE": "Benutzerprofil",
+    "COMPARISON": "Modulvergleich anzeigen"
+  },
+  "FOOTER": {
+    "LANGUAGE": "Sprache auswählen"
+  },
+  "REGISTER_DIALOG": {
+    "TITLE": "Registrieren",
+    "EMAIL_LABEL": "E-Mail-Adresse",
+    "PASSWORD_LABEL": "Passwort",
+    "USERNAME_LABEL": "Benutzername",
+    "CONFIRM_BUTTON": "Registrieren",
+    "SUCCESS": "Registrierung erfolgreich! Sie können sich jetzt einloggen.",
+    "ERROR": "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "USER_ERROR_CONFLICT": "Registrierung fehlgeschlagen. Benutzername bereits vergeben.",
+    "CATEGORY_PROGRAM": "Studiengang",
+    "SPECIALIZATION": "Vertiefung"
+  },
+  "LOGIN_DIALOG": {
+    "TITLE": "Einloggen",
+    "PASSWORD_LABEL": "Password",
+    "USERNAME_LABEL": "Username",
+    "CONFIRM_BUTTON": "Einlogen",
+    "USER_NOT_FOUND": "Einloggen fehlgeschlagen. Benutzer nicht gefunden oder falsches Passwort.",
+    "ERROR": "Einloggen fehlgeschlagen. Bitte versuchen Sie es erneut."
+  },
+  "LOGOUT_DIALOG": {
+    "SUCCESS": "Sie wurden erfolgreich ausgeloggt.",
+    "ERROR": "Ausloggen fehlgeschlagen. Bitte versuchen Sie es erneut."
+  },
+  "NOTIFICATION_DIALOG": {
+    "CONFIRM_BUTTON": "Okay",
+    "LOGIN_BUTTON": "Einloggen",
+    "SUCCESS": "Aktion erfolgreich abgeschlossen.",
+    "ERROR": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+  },
+  "USER_PROFILE": {
+    "TITLE": "Benutzerprofil",
+    "USERNAME": "Benutzername",
+    "EMAIL": "E-Mail Adresse",
+    "BACK_BUTTON": "zurück",
+    "PROGRAM": "Studiengang",
+    "SPECIALIZATION": "Vertiefung",
+    "SAVE_CHANGES_BUTTON": "Änderungen speichern",
+    "TOTAL_PASSED_ECTS": "Insgesamt bestandene ECTS"
+  },
+  "SEARCH": {
+    "CONFIRM_BUTTON": "Suchen"
+  },
+  "SCATTER_CHART": {
+    "CATEGORY": "Kategorie"
+  },
+  "MODULE_COMPARISON": {
+    "BACK_BUTTON": "zurück"
+  },
+  "FAILED_MODULE_DECISION_DIALOG": {
+    "INFO_TEXT": "Wenn Sie dieses Modul wiederholen möchten, wählen Sie bitte das Semester aus, in dem Sie es erneut belegen möchten. Wenn Sie dieses Modul nicht wiederholen möchten, können Sie ablehnen.",
+    "MODULE_CODE": "Modulcode",
+    "SPECIALIZATION": "Vertiefung",
+    "CATEGORY_MODULE_TYPE": "Modultyp",
+    "ECTS": "ECTS",
+    "SEMESTERS": "Semesters",
+    "SEMESTER": "Semester",
+    "CHANGE_BUTTON": "ändern",
+    "NEGATIVE_DECISION_BUTTON": "Modul nicht wiederholen"
+  },
+  "CONFIRMATION_DIALOG": {
+    "MESSAGE": "Sind Sie sicher, dass Sie diese Aktion durchführen möchten?",
+    "CONFIRM_BUTTON": "Bestätigen",
+    "CANCEL_BUTTON": "Abbrechen"
+  },
+  "STUDY_PROGRESS": {
+    "STATUS_EXPLANATION_TEXT": "Modul-Status (Rahmenfarben)",
+    "MODULE_TYPE": "Modultyp",
+    "MODULE_ECTS": "Modul ECTS",
+    "TOTAL_PLANNED_ECTS": "Insgesamt geplante ECTS",
+    "SEMESTER": "Semester",
+    "SPECIALIZATION": "Vertiefung",
+    "STATUS": "Status"
+  }
+}

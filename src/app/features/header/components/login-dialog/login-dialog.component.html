@@ -1,0 +1,43 @@
+<mat-dialog-content>
+  <h2 class="subTitle">{{ 'LOGIN_DIALOG.TITLE' | translate }}</h2>
+  <div class="vertical-content">
+
+    <mat-form-field [hideRequiredMarker]="false">
+      <mat-label>{{ 'LOGIN_DIALOG.USERNAME_LABEL' | translate }} </mat-label>
+      <input
+        matInput
+        [formControl]="username"
+        required
+      />
+
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-label>{{ 'LOGIN_DIALOG.PASSWORD_LABEL' | translate }}</mat-label>
+      <input matInput
+             [formControl]="password"
+             [type]="hide() ? 'password' : 'text'" />
+      <button
+        matIconButton
+        matSuffix
+        (click)="onClick($event)"
+        [attr.aria-pressed]="hide()"
+      >
+        <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div class="primary-button">
+    <button
+      (click)="onLogin()"
+      [disabled]="this.username.invalid || this.password.invalid"
+      matButton="filled">
+      {{ 'LOGIN_DIALOG.CONFIRM_BUTTON' | translate }}
+    </button>
+  </div>
+</mat-dialog-content>
+
+
+
+

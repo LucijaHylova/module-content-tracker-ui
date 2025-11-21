@@ -1,0 +1,136 @@
+<mat-dialog-content>
+  @if (this.selectedNode.isModule()) {
+
+    <h2>{{ data.name[lang()] }}</h2>
+    <div class="dialog-content">
+      <div><strong>{{ 'NODE_DETAILS_DIALOG.MODULE_CODE' | translate }}: </strong> {{ data.code }}</div>
+      <div><strong>{{ 'NODE_DETAILS_DIALOG.CATEGORY_DEPARTMENT' | translate }}: </strong> {{ data.department[lang()] }}</div>
+      <div><strong>{{ 'NODE_DETAILS_DIALOG.CATEGORY_PROGRAM' | translate }}: </strong> {{ data.program[lang()] }}</div>
+      <div><strong>{{ 'NODE_DETAILS_DIALOG.SPECIALIZATION' | translate }}: </strong> {{ data.specialization[lang()] }}</div>
+      <div><strong>{{ 'NODE_DETAILS_DIALOG.CATEGORY_MODULE_TYPE' | translate }}: </strong>{{ data.moduleType[lang()] }}</div>
+      <div><strong>{{ 'NODE_DETAILS_DIALOG.ECTS' | translate }}: </strong>{{ data.ects }}</div>
+      <div><strong>{{ 'NODE_DETAILS_DIALOG.SEMESTERS' | translate }}: </strong>{{ data.semesters?.join(', ') }}</div>
+      <div><strong>{{ 'NODE_DETAILS_DIALOG.CATEGORY_RESPONSIBILITY' | translate }}: </strong>{{ data.responsibility.de }}</div>
+    </div>
+    <br>
+    <div class="buttons-start">
+
+      <button
+        matButton="filled"
+        (click)="showCompetenceProfile()"
+      >
+        {{ 'NODE_DETAILS_DIALOG.SHOW_COMPETENCE_PROFILE_BUTTON' | translate }}
+      </button>
+
+      <button
+        matButton="filled"
+        (click)="showContentProfile()"
+      >
+        {{ 'NODE_DETAILS_DIALOG.SHOW_CONTENT_PROFILE_BUTTON' | translate }}
+      </button>
+
+        <button
+          matButton="filled"
+          (click)="addToModuleComparisonList(data.code)"
+          [disabled]="this.selectedNode().isInModuleComparison"
+        >
+          {{ 'NODE_DETAILS_DIALOG.ADD_TO_COMPARISON' | translate }}
+
+        </button>
+
+
+    </div>
+    @if (isLoggedIn()) {
+      <div class="buttons-start">
+        @if (data.semesters.length > 0 && !this.selectedNode().isCompulsory && !this.selectedNode().isInUserStudy ) {
+          <app-selector
+            (eventOnSelected)="onSemesterChanged($event)"
+            [options]="semesters"
+            [placeholder]="'NODE_DETAILS_DIALOG.SEMESTER' | translate"
+            [requireSelection]="true"
+            [useAutocomplete]="false"
+            [width]="'170px'">
+          </app-selector>
+
+        }
+
+
+        @if (this.selectedNode().flagged) {
+          <app-selector
+            (eventOnSelected)="onSemesterChanged($event)"
+            [options]="semesters"
+            [placeholder]="'NODE_DETAILS_DIALOG.SEMESTER' | translate"
+            [disabled]="addSemesterButtonDisabled() || (this.node?.semesters?.length ?? 0) < 1"
+            [resetEmitter]="resetEmitter"
+            [width]="'170px'">
+          </app-selector>
+          <app-selector
+            (eventOnSelected)="onStatusChanged($event)"
+            [options]="moduleStatuses"
+            [placeholder]="'NODE_DETAILS_DIALOG.MODULE_STATUS' | translate"
+            [width]="'170px'">
+          </app-selector>
+          <button
+            matButton="filled"
+            [disabled]="semester.value === '' && status.value === ''"
+            (click)="update()">
+              {{ 'NODE_DETAILS_DIALOG.CHANGE_BUTTON' | translate }}
+          </button>
+
+          <button
+            matButton="filled"
+            (click)="removeFromMyStudy()"
+            [disabled]=" !this.selectedNode().isInUserStudy || this.selectedNode().isCompulsory" >
+            {{ 'NODE_DETAILS_DIALOG.DELETE_FROM_MY_STUDY' | translate }}
+          </button>
+
+        }
+        @else {
+          <button
+            matButton="filled"
+            (click)="addToMyStudy()"
+            [disabled]="addButtonDisabled()">
+              {{ 'NODE_DETAILS_DIALOG.ADD_TO_MY_STUDY' | translate }}
+          </button>
+          @if(selectedNode().isInModuleComparison && isOnModuleComparisonPage?.()) {
+            <button
+              matButton="filled"
+              (click)="removeFromModuleComparison()"
+            >
+              {{ 'NODE_DETAILS_DIALOG.REMOVE_FROM_MODULE_COMPARISON' | translate }}
+            </button>
+          }
+        }
+      </div>
+    }
+
+  } @else {
+    @if (data.category === Category.RESPONSIBILITY[lang()]) {
+      <h2>{{ 'NODE_DETAILS_DIALOG.CATEGORY_RESPONSIBILITY' | translate }}: {{ data.name }}</h2>
+    }
+
+    @if (data.category === Category.MODULE_TYPE[lang()]) {
+      <h2>{{ 'NODE_DETAILS_DIALOG.CATEGORY_MODULE_TYPE' | translate }}: {{ data.name }}</h2>
+    }
+
+    @if (data.category === Category.PROGRAM[lang()] || data.category === Category.DEPARTMENT[lang()]) {
+
+      @if (data.category === Category.DEPARTMENT[lang()]) {
+        <h2>{{ 'NODE_DETAILS_DIALOG.CATEGORY_DEPARTMENT' | translate }}: {{ data.name }}</h2>
+      }
+
+      @if (data.category === Category.PROGRAM[lang()]) {
+        <h2>{{ 'NODE_DETAILS_DIALOG.CATEGORY_PROGRAM' | translate }}: {{ data.name }}</h2>
+      }
+
+      <div class="primary-button">
+        <button
+          matButton="filled"
+          (click)="showCompetenceProfile()">
+          {{ 'NODE_DETAILS_DIALOG.SHOW_COMPETENCE_PROFILE_BUTTON' | translate }}
+        </button>
+      </div>
+    }
+  }
+</mat-dialog-content>
+

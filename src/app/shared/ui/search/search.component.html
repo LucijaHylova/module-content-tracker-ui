@@ -1,0 +1,24 @@
+
+<mat-dialog-content>
+  <div class="search-container">
+    <mat-form-field>
+      <mat-label>{{ placeholder() }}</mat-label>
+        <input
+          type="text"
+          matInput
+          [formControl]="control" />
+    </mat-form-field>
+    <div class="search-button">
+      <button
+        (click)="onSearch()"
+        matButton="filled"
+        [disabled]="this.control.value?.trim()?.length === 0"
+        >
+        {{ 'SEARCH.CONFIRM_BUTTON' | translate }}
+
+      </button>
+    </div>
+  </div>
+
+</mat-dialog-content>
+

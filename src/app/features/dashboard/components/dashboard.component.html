@@ -1,0 +1,58 @@
+<div class="profile-container">
+  <app-nodes></app-nodes>
+</div>
+<div class="filter-container">
+
+  <div class="selectors">
+
+    <app-selector
+      [value]="selectedDepartment()"
+      [disabled]="departmentDisabled"
+      [options]="departments()"
+      [placeholder]=" 'DASHBOARD.CATEGORY_DEPARTMENT' | translate "
+      (eventOnSelected)="onDepartmentSelected($event)"
+      [resetEmitter]="resetEmitterDepartment">
+    </app-selector>
+
+    <app-selector
+      [value]="selectedProgram()"
+      [disabled]="programDisabled"
+      [options]="programs()"
+      [placeholder]=" 'DASHBOARD.CATEGORY_PROGRAM' | translate "
+      (eventOnSelected)="onProgramSelected($event)"
+      [resetEmitter]="resetEmitterProgram"
+    >
+    </app-selector>
+    <app-selector
+      [value]="selectedModuleType()"
+      [disabled]="moduleTypeDisabled"
+      [options]="moduleTypes()"
+      [placeholder]=" 'DASHBOARD.CATEGORY_MODULE_TYPE' | translate "
+      (eventOnSelected)="onModuleTypeSelected($event)"
+      [resetEmitter]="resetEmitterModuleType">
+    </app-selector>
+
+    <app-selector
+      [value]="currentSelectedModuleValue()"
+      [disabled]="moduleDisabled"
+      [options]="currentModuleNames()"
+      [placeholder]=" 'DASHBOARD.CATEGORY_MODULE' | translate "
+      (eventOnSelected)="onModuleSelected($event)"
+      [resetEmitter]="resetEmitterModule">
+    </app-selector>
+    <div class="secondary-button">
+      <button matButton="tonal" (click)="resetSelectors()">
+        {{ 'DASHBOARD.RESET_BUTTON' | translate }}
+      </button>
+    </div>
+  </div>
+  <app-search
+    [placeholder]=" 'DASHBOARD.MODULE_SEMANTIC_SEARCH_PLACEHOLDER' | translate "
+    (event)="onSearch($event)"
+  ></app-search>
+</div>
+
+
+
+
+

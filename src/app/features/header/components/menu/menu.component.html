@@ -1,0 +1,68 @@
+<button matIconButton [matMenuTriggerFor]="menu">
+  <mat-icon fontIcon="menu"></mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+  @if (!isOnHomePage()) {
+    <div class="mat-menu">
+      <button mat-menu-item (click)="routeToHome()">
+        <mat-icon fontIcon="home"></mat-icon>
+        <span>{{ 'HEADER.HOME' | translate }}</span>
+      </button>
+    </div>
+  }
+
+  @if (isLoggedIn()) {
+    <div class="mat-menu">
+      <button mat-menu-item (click)="showUserProfile()">
+        <mat-icon fontIcon="account_box"></mat-icon>
+        <span>{{ 'HEADER.USER_PROFILE' | translate }}</span>
+      </button>
+    </div>
+  }
+
+  @if (isLoggedIn()) {
+    <div class="mat-menu">
+      <button mat-menu-item (click)="routeToStudyProgress()">
+        <mat-icon fontIcon="moving"></mat-icon>
+        <span>{{ 'HEADER.STUDY_PROGRESS' | translate }}</span>
+      </button>
+    </div>
+  }
+  @if (isLoggedIn()) {
+  <div class="mat-menu">
+    <button
+      mat-menu-item (click)="navigateToModuleComparison()">
+      <mat-icon fontIcon="compare"></mat-icon>
+      <span>  {{ 'HEADER.COMPARISON' | translate }}</span>
+    </button>
+  </div>
+  }
+  @if (!isLoggedIn()) {
+    <div class="mat-menu">
+      <button mat-menu-item (click)="login()">
+        <mat-icon fontIcon="login"></mat-icon>
+        <span>{{ 'HEADER.LOGIN' | translate }}</span>
+      </button>
+    </div>
+  }
+  @if (!isLoggedIn()) {
+    <div class="mat-menu">
+      <button mat-menu-item (click)="register()">
+        <mat-icon fontIcon="person_add"></mat-icon>
+        <span>{{ 'HEADER.REGISTER' | translate }}</span>
+      </button>
+    </div>
+  }
+  @if (isLoggedIn()) {
+    <div class="mat-menu">
+      <button mat-menu-item (click)="logout()">
+        <mat-icon fontIcon="logout"></mat-icon>
+        <span>{{ 'HEADER.LOGOUT' | translate }}</span>
+      </button>
+    </div>
+  }
+
+</mat-menu>
+
+

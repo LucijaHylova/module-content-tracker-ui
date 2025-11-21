@@ -1,0 +1,16 @@
+@if (!loading()) {
+  <div
+       #chartContainer
+       echarts
+       role="img"
+       [options]="chartOptions()"
+
+       (chartClick)="onNodeClick($event)"
+       style="height: 75vh"
+
+  >
+  </div>
+
+} @else {
+  <div echarts [loading]="true">Loading...</div>
+}

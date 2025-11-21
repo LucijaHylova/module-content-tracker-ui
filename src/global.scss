@@ -1,0 +1,147 @@
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+@use "0-base/colors";
+@use '0-base/textFormatting';
+
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 5px;
+  height: 75vh;
+}
+
+.container {
+  padding-left: 5px;
+  margin: auto;
+}
+
+.vertical-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin: auto;
+}
+
+.title {
+  font-size: 32px;
+  color: colors.$text;
+  margin: auto;
+}
+
+.infoSection {
+  padding: 0 0 10px 0;
+}
+
+.primary-button {
+  padding: 0px 20px 10px 20px;
+  justify-self: center;
+  margin: auto;
+}
+
+.buttons-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0px 20px 10px 5px;
+  margin-left: auto;
+}
+
+.buttons-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0px 20px 10px 5px;
+  margin-left: auto;
+}
+
+.buttons-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 20px 10px 5px;
+  margin: auto;
+}
+
+.secondary-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2px 20px 2px 5px;
+  margin-right: auto;
+}
+
+.notification {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  width: fit-content;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

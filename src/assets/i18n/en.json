@@ -1,0 +1,133 @@
+{
+  "DASHBOARD": {
+    "CATEGORY_RESPONSIBILITY": "Responsibility",
+    "CATEGORY_MODULE_TYPE": "Module Type",
+    "CATEGORY_MODULE": "Module",
+    "CATEGORY_DEPARTMENT": "Department",
+    "CATEGORY_PROGRAM": "Program",
+    "RESET_BUTTON": "reset",
+    "MODULE_SEMANTIC_SEARCH_PLACEHOLDER": "module keyword search...",
+    "SIMILARITY_SEARCH_NO_RESULT": "No modules found. Please adjust your search criteria.",
+    "SIMILARITY_SEARCH_ERROR": "An error occurred while searching for modules. Please try again later.",
+    "MODULE_NOT_FOUND": "Module not found"
+  },
+  "NODE_DETAILS_DIALOG": {
+    "CATEGORY_RESPONSIBILITY": "Responsibility",
+    "CATEGORY_MODULE_TYPE": "Module Type",
+    "CATEGORY_MODULE": "Module",
+    "CATEGORY_DEPARTMENT": "Department",
+    "CATEGORY_PROGRAM": "Program",
+    "SPECIALIZATION": "Specialization",
+    "SHOW_COMPETENCE_PROFILE_BUTTON": "Competence profile",
+    "SHOW_CONTENT_PROFILE_BUTTON": "Content profile",
+    "ECTS": "ECTS",
+    "SEMESTERS": "Semesters",
+    "SEMESTER": "Semester",
+    "CHANGE_BUTTON": "Change",
+    "ADD_TO_COMPARISON": "Add to module comparison",
+    "MODULE_STATUS": "Module status",
+    "ADD_TO_MY_STUDY": "Add to my study",
+    "DELETE_FROM_MY_STUDY": "Remove from my study",
+    "REMOVE_FROM_MODULE_COMPARISON": "Remove from module comparison"
+  },
+  "COMPETENCE_PROFILES": {
+    "TITLE_CATEGORY_MODULE": "Modul competence profile",
+    "TITLE_CATEGORY_DEPARTMENT": "Department competence profile",
+    "TITLE_CATEGORY_PROGRAM": "Program competence profile",
+    "CATEGORY_MODULE_TYPE": "Module Type",
+    "BACK_BUTTON": "back",
+    "RESET_BUTTON": "reset"
+  },
+  "CONTENT_PROFILES": {
+    "TITLE_CATEGORY_MODULE": "Module content profile",
+    "BACK_BUTTON": "zurück",
+    "RESET_BUTTON": "zurücksetzen"
+  },
+  "HEADER": {
+    "REGISTER": "Register",
+    "LOGIN": "Login",
+    "LOGOUT": "Logout",
+    "COMPARISON": "View module comparison",
+    "STUDY_PROGRESS": "Study Progress",
+    "HOME": "Home",
+    "USER_PROFILE": "User Profile"
+  },
+  "FOOTER": {
+    "LANGUAGE": "Select language"
+  },
+  "REGISTER_DIALOG": {
+    "TITLE": "Register",
+    "EMAIL_LABEL": "Email Address",
+    "PASSWORD_LABEL": "Password",
+    "USERNAME_LABEL": "Username",
+    "CONFIRM_BUTTON": "Register",
+    "SUCCESS": "Registration successful! You can now log in.",
+    "ERROR": "Registration failed. Please try again.",
+    "USER_ERROR_CONFLICT": "Registration failed. Username already taken.",
+    "CATEGORY_PROGRAM": "Program",
+    "SPECIALIZATION": "Specialization"
+  },
+  "LOGIN_DIALOG": {
+    "TITLE": "Login",
+    "PASSWORD_LABEL": "Password",
+    "USERNAME_LABEL": "Username",
+    "CONFIRM_BUTTON": "Login",
+    "USER_NOT_FOUND": "Login failed. User not found or incorrect password.",
+    "ERROR": "Login failed. Please try again."
+  },
+  "LOGOUT_DIALOG": {
+    "SUCCESS": "You have been logged out successfully.",
+    "ERROR": "Logout failed. Please try again."
+  },
+  "NOTIFICATION_DIALOG": {
+    "CONFIRM_BUTTON": "Okay",
+    "LOGIN_BUTTON": "Login",
+    "SUCCESS": "Operation completed successfully.",
+    "ERROR": "An error occurred. Please try again."
+  },
+  "USER_PROFILE": {
+    "TITLE": "User Profile",
+    "USERNAME": "Username",
+    "EMAIL": "Email",
+    "BACK_BUTTON": "back",
+    "PROGRAM": "Program",
+    "SPECIALIZATION": "Specialization",
+    "SAVE_CHANGES_BUTTON": "Save Changes",
+    "TOTAL_PASSED_ECTS": "Total Passed ECTS"
+  },
+  "SEARCH": {
+    "CONFIRM_BUTTON": "Search"
+  },
+
+  "SCATTER_CHART": {
+    "CATEGORY": "Category"
+  },
+  "MODULE_COMPARISON": {
+    "BACK_BUTTON": "back"
+  },
+  "FAILED_MODULE_DECISION_DIALOG": {
+    "INFO_TEXT": "If you want to repeat this module, please select the semester in which you would like to retake it. If you do not want to repeat this module, you can decline.",
+    "MODULE_CODE": "Module Code",
+    "SPECIALIZATION": "Specialization",
+    "CATEGORY_MODULE_TYPE": "Module Type",
+    "ECTS": "ECTS",
+    "SEMESTERS": "Semesters",
+    "SEMESTER": "Semester",
+    "CHANGE_BUTTON": "Change",
+    "NEGATIVE_DECISION_BUTTON": "Do not repeat module"
+  },
+  "CONFIRMATION_DIALOG": {
+    "MESSAGE": "Are you sure you want to proceed?",
+    "CONFIRM_BUTTON": "Confirm",
+    "CANCEL_BUTTON": "Cancel"
+  },
+  "STUDY_PROGRESS": {
+    "STATUS_EXPLANATION_TEXT": "Module Status (frame colors)",
+    "MODULE_TYPE": "Module Type",
+    "MODULE_ECTS": "Module ECTS",
+    "TOTAL_PLANNED_ECTS": "Total Planned ECTS",
+    "SEMESTER": "Semester",
+    "SPECIALIZATION": "Specialization",
+    "STATUS": "Status"
+  }
+}

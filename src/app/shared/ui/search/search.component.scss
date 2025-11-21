@@ -1,0 +1,16 @@
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-container mat-form-field {
+  width: 250px;
+}
+
+.search-button {
+  padding: 2px 5px;
+}
+

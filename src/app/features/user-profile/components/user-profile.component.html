@@ -1,0 +1,38 @@
+<div class="profile-container">
+  <h2 class="title">
+    {{ 'USER_PROFILE.TITLE' | translate }}
+  </h2>
+  <div><strong>{{ 'USER_PROFILE.USERNAME' | translate}}: </strong> {{ user.username() }}</div>
+  <div><strong>{{ 'USER_PROFILE.EMAIL' | translate}}: </strong> {{ user.email() }}</div>
+  <div><strong>{{ 'USER_PROFILE.PROGRAM' | translate}}: </strong> {{ user.program() }}</div>
+  <div><strong>{{ 'USER_PROFILE.SPECIALIZATION' | translate}}: </strong> {{ user.specialization() }}</div>
+  <div><strong> {{'USER_PROFILE.TOTAL_PASSED_ECTS' | translate}}: </strong> {{user.totalPassedEcts()}}</div>
+  <div style="height: 75vh;">
+
+  </div>
+  <div class="secondary-button">
+    <button matButton="tonal"
+            (click)="back()">
+      {{ 'USER_PROFILE.BACK_BUTTON' | translate }}
+    </button>
+  </div>
+
+  <div class="buttons-end">
+    <app-selector
+      (eventOnSelected)="onSpecializationChange($event)"
+      [options]="programSpecializations().get(user.program() || '') || []"
+      [placeholder]="'USER_PROFILE.SPECIALIZATION' | translate"
+      [requireSelection]="true"
+      [width]="'400px'">
+    </app-selector>
+
+      <button class="secondary-button"
+              (click)="change()"
+              matButton="filled">
+        {{ 'USER_PROFILE.SAVE_CHANGES_BUTTON' | translate }}
+      </button>
+
+  </div>
+
+
+</div>

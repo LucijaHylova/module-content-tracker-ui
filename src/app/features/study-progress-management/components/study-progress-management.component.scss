@@ -1,0 +1,26 @@
+.status-legend {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.legend-items {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  .status-line {
+    display: inline-block;
+    width: 35px;
+    height: 5px;
+    border-radius: 3px;
+  }
+}

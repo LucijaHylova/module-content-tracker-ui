@@ -1,0 +1,20 @@
+section {
+  display: flex;
+  align-items: center;
+}
+
+.button-label {
+  font-size: 14px;
+  margin: 0 16px 0 8px;
+  min-width: 120px;
+}
+
+.button-row {
+  max-width: 600px;
+}
+
+.button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+

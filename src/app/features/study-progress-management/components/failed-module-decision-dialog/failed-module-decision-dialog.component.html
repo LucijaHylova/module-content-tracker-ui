@@ -1,0 +1,46 @@
+<mat-dialog-content>
+  @if (this.selectedNode.isModule()) {
+
+    <h2>{{ data.name[lang()] }}</h2>
+    <div class="dialog-content">
+      <div><strong>{{ 'FAILED_MODULE_DECISION_DIALOG.MODULE_CODE' | translate }}: </strong> {{ data.code }}</div>
+      <div><strong>{{ 'FAILED_MODULE_DECISION_DIALOG.SPECIALIZATION' | translate }}: </strong> {{ data.specialization[lang()] }}</div>
+      <div><strong>{{ 'FAILED_MODULE_DECISION_DIALOG.CATEGORY_MODULE_TYPE' | translate }}: </strong>{{ data.moduleType[lang()] }}</div>
+      <div><strong>{{ 'FAILED_MODULE_DECISION_DIALOG.ECTS' | translate }}: </strong>{{ data.ects }}</div>
+      <div><strong>{{ 'FAILED_MODULE_DECISION_DIALOG.SEMESTERS' | translate }}: </strong>{{ data.semesters.join(', ') }}</div>
+    </div>
+    <br>
+    <p>
+      {{ 'FAILED_MODULE_DECISION_DIALOG.INFO_TEXT' | translate }}
+    </p>
+    <br>
+
+    @if (isLoggedIn()) {
+      <div class="buttons-start">
+
+          <app-selector
+            (eventOnSelected)="onSemesterChanged($event)"
+            [options]="semesters"
+            [placeholder]="'FAILED_MODULE_DECISION_DIALOG.SEMESTER' | translate"
+            [useAutocomplete]="false"
+            [width]="'170px'">
+          </app-selector>
+
+          <button
+            matButton="filled"
+            [disabled]="semester.value === ''"
+            (click)="update()">
+            {{ 'FAILED_MODULE_DECISION_DIALOG.CHANGE_BUTTON' | translate }}
+          </button>
+          <button
+            matButton="filled"
+            (click)="back()">
+            {{ 'FAILED_MODULE_DECISION_DIALOG.NEGATIVE_DECISION_BUTTON' | translate }}
+          </button>
+      </div>
+    }
+
+  }
+
+</mat-dialog-content>
+

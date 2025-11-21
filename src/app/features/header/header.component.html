@@ -1,0 +1,46 @@
+
+<div class="container horizontal-content">
+  <app-menu></app-menu>
+  @if(!isLoggedIn()) {
+    <div class="buttons-end">
+      <button
+        matButton="filled"
+        (click)="login()"
+      >
+        <mat-icon fontIcon="login"></mat-icon>
+        <span>
+           {{ 'HEADER.LOGIN' | translate }}
+        </span>
+
+      </button>
+
+      <button
+        matButton="filled"
+        (click)="register()"
+      >
+        <mat-icon fontIcon="person_add"></mat-icon>
+        <span>
+        {{ 'HEADER.REGISTER' | translate }}
+        </span>
+
+      </button>
+    </div>
+  }
+  @else {
+
+    <div class="buttons-end">
+      <button
+        matButton="filled"
+        (click)="logout()"
+      >
+        <mat-icon fontIcon="logout"></mat-icon>
+      <span>  {{ 'HEADER.LOGOUT' | translate }}</span>
+      </button>
+
+    </div>
+  }
+
+</div>
+
+
+

@@ -4,10 +4,13 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use(express.static(path.join(__dirname, 'dist/')));
+
+const distFolder = path.join(__dirname, 'dist/module-content-tracker-ui');
+
+app.use(express.static(distFolder));
 
 app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/'));
+  res.sendFile(path.join(distFolder, 'index.html'));
 });
 
 app.listen(port, () => {

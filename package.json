@@ -6,7 +6,7 @@
     "start:developement": "ng serve -c development --proxy-config src/proxy.conf.json",
     "start:test": "ng serve -c test --proxy-config src/proxy.conf.json",
     "start:railway": "ng serve -c railway",
-    "start": "ng run serve:railway",
+    "start": "ng run --configuration railway",
     "build:dev": "ng build -c development",
     "build:prod": "ng build -c production",
     "build": "ng build --configuration railway",

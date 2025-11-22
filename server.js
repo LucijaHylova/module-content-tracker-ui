@@ -14,6 +14,7 @@ app.get(/.*/, (req, res) => {
   res.sendFile(path.join(path.join(distFolder, 'index.html')));
 });
 
+
 // app.get(/.*/, (req, res) => {
 //   res.sendFile(path.resolve('dist/module-content-tracker-ui', 'index.html'));
 // });

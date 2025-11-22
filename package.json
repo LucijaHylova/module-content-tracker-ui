@@ -9,7 +9,7 @@
     "start": "node server.js",
     "build:dev": "ng build -c development",
     "build:prod": "ng build -c production",
-    "build": "ng build --configuration production",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "npx playwright test --ui show-report --config=playwright.config.ts",

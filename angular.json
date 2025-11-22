@@ -117,6 +117,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
+            "outputPath": "dist/module-content-tracker-ui",
             "polyfills": [
               "zone.js",
               "zone.js/testing",

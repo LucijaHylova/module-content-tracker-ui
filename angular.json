@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "app/dist/module-content-tracker-ui",
+            "outputPath": "dist/module-content-tracker-ui",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js",

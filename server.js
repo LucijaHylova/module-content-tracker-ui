@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 
-const distFolder = path.join(__dirname, 'dist/module-content-tracker-ui');
+const distFolder = path.join(__dirname, 'app/dist/module-content-tracker-ui');
 
 app.use(express.static(distFolder));
 

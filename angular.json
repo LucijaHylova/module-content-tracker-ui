@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/module-content-tracker-ui",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js",
@@ -117,7 +118,6 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "outputPath": "dist/module-content-tracker-ui",
             "polyfills": [
               "zone.js",
               "zone.js/testing",

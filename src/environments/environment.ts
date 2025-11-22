@@ -1,12 +1,9 @@
 export const environment = {
   name: 'production',
-  production: true,
-  apiUrl: 'http://localhost:4200/api',
-  baseUrl: 'http://localhost:4200',
+  apiUrl: 'module-content-tracker-ui-production.up.railway.app',
+  baseUrl: 'module-content-tracker-ui-production.up.railway.app',
+  production: false,
   endpoints: {
-    modules: {
-      getAll: '/modules/all'
-    },
     contentProfiles: {
       getModuleCompetenciesProfiles: '/content/getModuleCompetenceProfiles',
       getProgramContentCompetenciesProfiles: '/content/getProgramCompetenceProfiles',
@@ -14,6 +11,5 @@ export const environment = {
       getModuleContentProfiles: '/content/getModuleContentProfiles',
     }
   },
-  testMode: true,
-
+  testMode: false
 };

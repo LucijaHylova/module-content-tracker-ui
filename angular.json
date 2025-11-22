@@ -104,6 +104,9 @@
             },
             "test": {
               "buildTarget": "module-content-tracker-ui:build:test"
+            },
+            "railway": {
+              "buildTarget": "module-content-tracker-ui:build:railway"
             }
           },
           "defaultConfiguration": "development"

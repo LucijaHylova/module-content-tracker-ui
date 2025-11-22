@@ -2,7 +2,7 @@ export const environment = {
   name: 'production',
   apiUrl: 'module-content-tracker-ui-production.up.railway.app',
   baseUrl: 'module-content-tracker-ui-production.up.railway.app',
-  production: false,
+  production: true,
   endpoints: {
     contentProfiles: {
       getModuleCompetenciesProfiles: '/content/getModuleCompetenceProfiles',

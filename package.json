@@ -33,6 +33,7 @@
     "@ngx-translate/http-loader": "^17.0.0",
     "date-fns": "^4.1.0",
     "echarts": "^6.0.0",
+    "https-proxy-agent": "^7.0.6",
     "material-symbols": "^0.35.1",
     "ngx-echarts": "^20.0.2",
     "rxjs": "^7.8.2",

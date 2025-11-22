@@ -9,7 +9,7 @@ const distFolder = path.resolve('dist/module-content-tracker-ui');
 
 app.use(express.static(distFolder));
 
-app.get('/*', (req, res) => {
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(distFolder, 'index.html'));
 });
 
